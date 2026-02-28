@@ -1,0 +1,138 @@
+6. DEVELOP AN HTML DOCUMENT TO DISPLAY A REGISTRATION FORM FOR
+INTER-COLLEGEIATE FUNCTION
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inter-Collegiate Function Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS Link -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Inter-Collegiate Function</hl>
+<p>Registration Form</p>
+<form id="registrationForm">
+<label>Student Name</label>
+<input type="text" id="name" placeholder="Enter your name" required>
+<label>College Name</label>
+<input type="text" id="college" placeholder="Enter college name" required>
+<label>Department</label>
+<input type="text" id="department" placeholder="Enter department" required>
+<label>Year of Study</label>
+<select id="year" required>
+<option value="">-- Select Year --</option>
+<option>First Year</option>
+<option>Second Year</option>
+<option>Third Year</option>
+<option>Final Year</option>
+</select>
+<label>Gender</label>
+<div class="radio-group">
+<input type="radio" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Other"> Other
+</div>
+<label>Email</label>
+<input type="email" id="email" placeholder="example@gmail.com" required>
+<label>Mobile Number</label>
+<input type="tel" id="phone" pattern="[0-9]{10}" placeholder="10-digit number" required>
+<label>Event Name</label>
+<select id="event" required>
+<option value="">-- Select Event --</option>
+<option>Paper Presentation</option>
+<option>Project Expo</option>
+<option>Technical Quiz</option>
+<option>Debugging</option>
+<option>Cultural Event</option>
+</select>
+<label>College Address</label>
+<textarea rows="3" placeholder="Enter address"></textarea>
+<div class="buttons">
+<button type="submit">Register</button>
+<button type="reset">Clear</button>
+</div>
+</form>
+<footer>
+2026 Inter-Collegiate Event Committee
+</footer>
+</div>
+<!-- JavaScript Link -->
+<script sre="script.js"></script>
+</body>
+</html>
+Style.css
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(135deg, #667eea, #764ba2);
+margin: 0;
+padding: 0;
+}
+.container {
+max-width: 600px;
+margin: 40px auto;
+background: #ffffff;
+padding: 25px;
+border-radius: 12px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+h1 {
+}
+text-align: center;
+color: #333:
+P{
+text-align: center;
+color: #666;
+margin-bottom: 25px;
+}
+label {
+display: block;
+margin-top: 15px;
+font-weight: bold;
+}
+input, select, textarea {
+width: 100%:
+padding: 10px;
+margin-top: 6рx;
+border: 1px solid #cce;
+border-radius: 6px;
+font-size: 14px;
+}
+}
+.radio-group {
+margin-top: 8px;
+.radio-group input {
+width: auto;
+margin-right: 5px;
+}
+.buttons {
+text-align: center;
+margin-top: 25px;
+}
+button {
+background: #667eea;
+color: white;
+border: none;
+padding: 12px 25px;
+font-size: 16px;
+border-radius: 8px;
+cursor: pointer;
+margin: 5pх;
+}
+button:hover{
+background: #5a67d8;
+}
+footer {
+text-align: center;
+margin-top: 20px;
+font-size: 13px;
+color: #999:
+}
+Script.js
+document.getElementById("registrationForm").addEventListener("submit", function (event) {
+});
+event.preventDefault();
+alert("Registration Successful!\nThank you for registering.");
+
