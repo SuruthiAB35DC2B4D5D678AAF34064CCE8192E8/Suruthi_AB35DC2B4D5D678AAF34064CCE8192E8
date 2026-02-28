@@ -1,0 +1,128 @@
+7. USING HTML FORM АССЕРT CUSTOMER DETAILS AND VALIDATE USING PHP
+C:/xampp/htdocs/customer_app/
+index.html
+submit.php
+style.css
+Indax.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Customer Details</title>
+<<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h2>Customer Details Form</h2>
+<form action="submit.php" method="post">
+<label>Name</label>
+<input type="text" name="name">
+<label>City</label>
+<input type="text" name="city"<
+<label>Pin Code</label>
+<input type="text" name="pin">
+<label>Phone Number</label>
+<input type="text" name="phone">
+<label>Email Address</label>
+<input type="text" name="email">
+<button tyрe="submit">Submit</button>
+</form>
+</div>
+</body>
+</html>
+Submit.php
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$name = $_POST['name'];
+$city = $_POST['city'];
+$pin = $_POST['pin'];
+Sphone = $_POST['phone'];
+$email = $_POST['email'];
+// Validation
+if (empty($name) || empty($city)) ||empty($pin) ||| empty($phone) || empty($email)) {
+echo "All fields are mandatory!";
+} elseif (strlen($pin) != 6) {
+echo "Pin code must be 6 digits!":
+} elseif (strlen(Sphone) != 10) {
+echo "Phone number must be 10 digits!";
+} else {
+exit;
+echo "Form submitted successfully";
+header("refresh:2;url=index.html");
+}
+}
+?
+style.css
+*{
+}
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: &#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
+body {
+height: 100vh;
+/* Purple and Blue gradient background */
+background: linear-gradient(135deg, #667eea, #764ba2);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container }
+width: 450px;
+background: white;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+h2
+text-align: center;
+color: #764ba2;
+margin-bottom: 20px;
+font-size: 24px;
+}
+label {
+font-weight: bold;
+display: block;
+margin-top: 15px;
+color: #333:
+}
+input {
+width: 100%;
+padding: 12px;
+margin-top: 5px;
+border-radius: 8px;
+border: 1px solid #dd:
+font-size: 14px;
+transition: 0.3s;
+}
+input:focus {
+border-color: #764ba2;
+box-shadow: 00 8px rgba(118, 75, 162, 0.2);
+outline: none;
+}
+button {
+width: 100%;
+margin-top: 25px;
+padding: 12px;
+background: linear-gradient(45deg, #667eea, #764ba2);
+color: white:
+border: none;
+border-radius: 25px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: transform 0.2s, opacity 0.2s;
+}
+button:hover {
+opacity: 0.9;
+transform: translateY(-2px);
+}
+/* Error message styling for PHP output */
+.error-msg {
+color: red:
+background: #ffe6e6;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 10px;
+list-style: none;
+}
