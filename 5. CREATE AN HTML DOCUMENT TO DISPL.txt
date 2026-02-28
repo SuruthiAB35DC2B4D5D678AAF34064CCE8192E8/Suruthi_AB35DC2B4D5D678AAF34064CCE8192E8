@@ -1,0 +1,137 @@
+5. CREATE AN HTML DOCUMENT TO DISPLAY YOUR BIO-DATA
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Digital Biodata</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="profile-card">
+<h1>Arthisai</hl>
+<p class="tag">Web Development Student</p<
+<button onclick="toggle()">View Full Biodata</button>
+</div>
+<div id="biodata" class="biodata"><
+<h2>Personal Information</h2>
+<table>
+<tr><td>Name</td><td>Arthisai</td></tr>
+<tr><td>Date of Birth</td><td>18-07-2001</td></tr>
+<tr><td>Gender</td><td>Female</td></tr>
+<tr><td>Nationality</td><td>Indian</td></tr>
+<tr><td>Languages</td><td>English,Tamil</td></tr>
+</table>
+<h2>Educational Qualification</h2>
+<ul>
+<li>M.C.А - САHCET</li>
+<li>B.Sc Computer Science - M.M.E.S College</li>
+<li>Higher Secondary - A.A.Govt School</li>
+<li>SSLC-A.A.Govt School</li>
+</ul>
+<h2>Skills</h2>
+<div class="skills">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span<
+<span>PHP</span>
+</div>
+<h2>Contact Details</h2>
+<p> Phone: 9876543210</p>
+<p> Email: arthisai18@gmail.com</p>
+<p> Address: Chennai, Tamil Nadu</p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+}
+Style.css
+{
+margin: 0;
+padding: 0;
+box-sizing: border-boх;
+font-family: 'Segoe UI', sans-serif;
+body {
+min-height: 100vh;
+background: linear-gradient(135deg, #667eea, #764ba2);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container {
+width: 900px;
+}
+.profile-card {
+background: white;
+text-align: center;
+padding: 30рx;
+border-radius: 20px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.profile-card img {
+width: 120px;
+border-radius: 50%:
+border: 5px solid #764ba2;
+}
+.profile-card h1 {
+margin-top: 15px;
+color: #333:
+}
+.tag {
+color: #764ba2;
+font-weight: bold;
+margin-bottom: 15px;
+}
+button {
+padding: 12px 25px;
+border: none;
+border-radius: 30px;
+background: linear-gradient(45deg, #667eea, #764ba2);
+color: white;
+cursor: pointer;
+transition: 0.3s;
+}
+button:hover {
+transform: scale(1.1);
+}
+.biodata {
+display: none;
+margin-top: 25px;
+background: rgba(255,255,255,0.95);
+padding: 30px;
+border-radius: 20px;
+}
+h2
+color: #764ba2;
+margin: 20px 0 10px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+}
+td {
+}
+padding: 10px;
+border-bottom: 1px solid #cce;
+.skills span {
+display: inline-block;
+background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+padding: 8px 15px;
+margin: 5px;
+border-radius: 20px;
+font-weight: bold;
+}
+Script.js
+function toggle() {
+let bio = document.getElement ById("biodata");
+}
+}
+if (bio.style.display=== "none" || bio.style.display==="") {
+bio.style.display = "block";
+} else {
+bio.style.display = "none";
+}
+}
+
