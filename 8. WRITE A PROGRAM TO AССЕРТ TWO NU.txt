@@ -1,0 +1,120 @@
+8. WRITE A PROGRAM TO AССЕРТ TWO NUMBERS N1 AND N2 USING AN HTML
+FORM AND DISPLAY THE PRIME NUMBERS BETWEEN THEM USING PHP
+C:/xampp/htdocs/customer_app/
+index.html
+Prime.php
+style.css
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prime Numbers Program</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h2>Prime Numbers Finder</h2>
+<p>Enter two numbers</p>
+<form action="prime.php" method="post" onsubmit="return validateForm()">
+<label>First Number (n1)</label>
+<input type="text" name="n1" id="n1">
+<label>Second Number (n2)</label>
+<input type="text" name="n2" id="n2">
+<button type="submit">Find Prime Numbers</button<
+</form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+Prime.php
+<?php
+echo'prime number between 1 to 100 are:</br>';
+for($i=1;$i<=100;$i++)
+{
+$b=0;
+for($j=1;$j<=$i;$j++)
+{
+}
+if($i%$j==0)
+{
+$b=$b+1;
+}
+}
+if($b==2)
+{
+echo''.$i;
+}
+}
+?>
+Style.css
+* {
+}
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+body {
+height: 100vh;
+background: linear-gradient(135deg, #11998e, #38ef7d);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container {
+background: white;
+padding: 30px;
+width: 400px;
+border-radius: 15px;
+box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+h2 {
+text-align: center;
+color: #11998e;
+margin-bottom: 10px;
+}
+P{
+text-align: center;
+margin-bottom: 20px;
+}
+label {
+font-weight: bold;
+display: block;
+margin-top: 10px;
+}
+input {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border-radius: 8px;
+border: 1px solid #cce;
+}
+button {
+width: 100%;
+margin-top: 20px;
+padding: 12px;
+background: linear-gradient(45deg, #11998e, #38ef7d);
+color: white;
+border: none;
+border-radius: 25px;
+}
+font-size: 16рx;
+cursor: pointer;
+button:hover {
+opacity: 0.9;
+}
+Script.js
+function validateForm() {
+let n1 = document.getElement ById("n1").value;
+let n2 = document.getElementById("n2").value;
+}
+if (nl === "" || n2 === "") {|
+alert("Both numbers are required!");
+return false;
+}
+if (isNaN(n1) || isNaN(n2)) {
+alert("Please enter valid numbers!");
+return false;
+}
+return true;
+}
