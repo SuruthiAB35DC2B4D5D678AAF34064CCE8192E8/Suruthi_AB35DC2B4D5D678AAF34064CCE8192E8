@@ -1,0 +1,136 @@
+3. CREATE AN HTML DOCUMENT TO DISPLAY TEXT USING BULLETED AND NUMBERED
+LISTS AND TO PRESENT DATA IN TABLE FORMAT
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Program 3 - Lists and Tables</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> Display Lists and Tables</h1>
+<section class="box">
+<h2>Course info</h2>
+<h3>Web Technologies</h3>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>PHP</li>
+<li>MySQL</li>
+</ul>
+<h3>Web Development Process</h3>
+<ol>
+<li>Requirement Analysis</li>
+<li>Design</li>
+<li>Development</li>
+<li>Testing</li>
+<li>Deployment</li>
+</ol>
+</section>
+<section class="box">
+<h2>Students info</h2>
+<table>
+<tr>
+<th>Roll No</th>
+<th>Name</th>
+<th>Course</th>
+<th>Year</th>
+<th>Percentage</th>
+</tr>
+<tr>
+<td>01</td>
+<td>Arthi</td>
+<td>B.Sc CS</td>
+<td>II</td>
+<td>85%</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Ravi</td>
+<td>BCA</td>
+<td>II</td>
+<td>88%</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Sneha</td>
+<td>B.Sc IT</td>
+<td>II</td>
+<td>90%</td>
+</tr>
+</table>
+<button onclick="showMessage()">Click Me</button>
+<p id="msg"></p>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
+Style.css
+body {
+font-family: Arial, sans-serif;
+background-color: #f2f6f9;
+margin: 0;
+padding: 20px;
+}
+hl {
+text-align: center;
+color: #2c3e50;
+}
+.box {
+background-color: white;
+padding: 20px;
+margin: 20px auto;
+width: 80%;
+border-radius: 8px;
+box-shadow: 00 10px rgba(0,0,0,0.1);
+}
+h2 {
+color: #34495e;
+border-bottom: 2px solid #3498db;
+}
+ul {
+list-style-type: square;
+margin-left: 30px;
+}
+ol {
+margin-left: 30px;
+}
+table{
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+}
+table, th, td {
+border: 1px solid #333:
+}
+}
+th {
+background-color: #3498db;
+color: white:
+padding: 10px;
+td {
+text-align: center;
+padding: 8px;
+}
+tr:nth-child(even) {
+background-color: #ecfOf1;
+}
+button
+margin-top: 15px;
+padding: 8px 15px;
+background-color: #27ae60;
+color: white:
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+button:hover {
+background-color: #219150;
+}
+Script.js
+function showMessage() {
+document.getElementById("msg").innerHTML =
+"Table and Lists displayed successfully!";
+}
